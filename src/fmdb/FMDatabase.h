@@ -476,7 +476,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
 
  */
 
-- (BOOL)executeStatements:(NSString *)sql withResultBlock:(FMDBExecuteStatementsCallbackBlock)block;
+- (BOOL)executeStatements:(NSString *)sql withResultBlock:(__attribute__((noescape))  FMDBExecuteStatementsCallbackBlock)block;
 
 /** Last insert rowid
  
